@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Google Precise Location Blocker",
+    "version": "1.0",
+    "description": "Blocks Google's precise location request popups.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://*.google.com/*", "*://google.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
